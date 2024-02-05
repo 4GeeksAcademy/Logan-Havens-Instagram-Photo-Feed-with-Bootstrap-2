@@ -1,11 +1,9 @@
 <!doctype html>
 <html lang="en">
-
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -13,7 +11,6 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
     <title>The Instagram Photo Feed (with Bootstrap)</title>
 </head>
-
 <body>
     <div class="container"> 
 <!--Nav bar-->
@@ -39,15 +36,33 @@
                     <div class="modal-dialog">
                       <div class="modal-content">
                         <div class="modal-header">
-                          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                          <h5 class="modal-title" id="exampleModalLabel">Create a new post</h5>
+                          
                           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                          ...
+                           <div class="mb-3">
+                            <label for="message-text" class="col-form-label">
+                              <h6>Caption:</h6>
+                            </label>
+                            <textarea class="form-control" id="message-text"
+                              placeholder="Add the caption of your post here"></textarea>
+                            <button type="button" class="mt-3 pt-1 btn btn-light btn btn-outline-secondary">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-camera-fill" viewBox="0 0 16 16">
+                                <path d="M10.5 8.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0"/>
+                                <path d="M2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4zm.5 2a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m9 2.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0"/>
+                              </svg>
+                            </button>
+                            <button type="button" class="mt-3 pt-1 px-3 btn btn-light btn btn-outline-secondary">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                                <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
+                              </svg>
+                            </button>
+                          </div>
                         </div>
                         <div class="modal-footer">
                           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                          <button type="button" class="btn btn-primary">Save changes</button>
+                          <button type="button" class="btn btn-success">Publish</button>
                         </div>
                       </div>
                     </div>
@@ -60,16 +75,17 @@
                       </svg>
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  <li><a class="dropdown-item" href="#">Profile</a></li>
+                  <li><a class="dropdown-item" href="#">Accesibilty</a></li>
+                  <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
+                  <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" style="color: red" href="#">Log Out</a>
                 </ul>
               </div>
         </ul>
       </div>
     </div>
   </nav>
-
 <!--nav tabs-->
 <ul class="nav nav-tabs" id="myTab" role="tablist">
     <li class="nav-item" role="presentation">
@@ -82,61 +98,64 @@
   </ul>
   <div class="tab-content" id="myTabContent">
     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-   <!--gridview-->     
-   <div class="container text-center">
-    <div class="row">
-        <div class="col-4">
-            <div class="card mt-3" style="width:18rem;">
-                <img src="https://www.wilson.com/en-us/media/catalog/product/article_images/WTH01020X_/WTH01020X__e79165155a81c0e376450a96ffb821bf.png?dpr=2&fit=bounds&orient=1&quality=90&optimize=high&format=pjpg&auto=webp&enable=upscale&width=1920&height=904&bg-color=f5f5f5" class="card-img-top">
-            </div>
-        </div>
-        <div class="col-4">
-            <div class="card mt-3" style="width:18rem;">
-                <img src="https://scontent-ord5-2.xx.fbcdn.net/v/t39.30808-6/350538024_929240158378108_8295401280962438242_n.jpg?stp=cp6_dst-jpg&_nc_cat=102&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=agHG59P7G2kAX9bC1Oy&_nc_ht=scontent-ord5-2.xx&oh=00_AfCOIexz9NKO2yUuGXWTuKI9bkuojpPJ3mh0ASqxC561pQ&oe=65C25922" class="card-img-top">
-            </div>
-        </div>
-        <div class="col-4">
-            <div class="card mt-3" style="width:18rem;">
-                <img src="https://1000logos.net/wp-content/uploads/2018/06/St.-Louis-Blues-Logo.png" class="card-img-top">
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-4">
-            <div class="card mt-3" style="width:18rem;">
-                <img src="https://www.wilson.com/en-us/media/catalog/product/article_images/WTH01020X_/WTH01020X__e79165155a81c0e376450a96ffb821bf.png?dpr=2&fit=bounds&orient=1&quality=90&optimize=high&format=pjpg&auto=webp&enable=upscale&width=1920&height=904&bg-color=f5f5f5" class="card-img-top">
-            </div>
-        </div>
-        <div class="col-4">
-            <div class="card mt-3" style="width:18rem;">
-                <img src="https://www.wilson.com/en-us/media/catalog/product/article_images/WTH01020X_/WTH01020X__e79165155a81c0e376450a96ffb821bf.png?dpr=2&fit=bounds&orient=1&quality=90&optimize=high&format=pjpg&auto=webp&enable=upscale&width=1920&height=904&bg-color=f5f5f5" class="card-img-top">
-            </div>
-        </div>
-        <div class="col-4">
-            <div class="card mt-3" style="width:18rem;">
-                <img src="https://www.wilson.com/en-us/media/catalog/product/article_images/WTH01020X_/WTH01020X__e79165155a81c0e376450a96ffb821bf.png?dpr=2&fit=bounds&orient=1&quality=90&optimize=high&format=pjpg&auto=webp&enable=upscale&width=1920&height=904&bg-color=f5f5f5" class="card-img-top">
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-4">
-            <div class="card mt-3" style="width:18rem;">
-                <img src="https://www.wilson.com/en-us/media/catalog/product/article_images/WTH01020X_/WTH01020X__e79165155a81c0e376450a96ffb821bf.png?dpr=2&fit=bounds&orient=1&quality=90&optimize=high&format=pjpg&auto=webp&enable=upscale&width=1920&height=904&bg-color=f5f5f5" class="card-img-top">
-            </div>
-        </div>
-        <div class="col-4">
-            <div class="card mt-3" style="width:18rem;">
-                <img src="https://www.wilson.com/en-us/media/catalog/product/article_images/WTH01020X_/WTH01020X__e79165155a81c0e376450a96ffb821bf.png?dpr=2&fit=bounds&orient=1&quality=90&optimize=high&format=pjpg&auto=webp&enable=upscale&width=1920&height=904&bg-color=f5f5f5" class="card-img-top">
-            </div>
-        </div>
-        <div class="col-4">
-            <div class="card mt-3" style="width:18rem;">
-                <img src="https://www.wilson.com/en-us/media/catalog/product/article_images/WTH01020X_/WTH01020X__e79165155a81c0e376450a96ffb821bf.png?dpr=2&fit=bounds&orient=1&quality=90&optimize=high&format=pjpg&auto=webp&enable=upscale&width=1920&height=904&bg-color=f5f5f5" class="card-img-top">
-            </div>
-        </div>
-    </div>
+    <!--gridview-->     
+    <div class="container text-center">
+     <div class="row">
+       <div class="col-4">
+         <div class="card mt-3" style="width:18rem;height: 18rem;">
+                 <img src="https://www.wilson.com/en-us/media/catalog/product/article_images/WTH01020X_/WTH01020X__e79165155a81c0e376450a96ffb821bf.png?dpr=2&fit=bounds&orient=1&quality=90&optimize=high&format=pjpg&auto=webp&enable=upscale&width=1920&height=904&bg-color=f5f5f5" class="img-fluid">
+             </div>
+         </div>
+         <div class="col-4">
+           <div class="card mt-3" style="width:18rem;height: 18rem;">
+                 <img src="https://scontent-ord5-2.xx.fbcdn.net/v/t39.30808-6/350538024_929240158378108_8295401280962438242_n.jpg?stp=cp6_dst-jpg&_nc_cat=102&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=agHG59P7G2kAX9bC1Oy&_nc_ht=scontent-ord5-2.xx&oh=00_AfCOIexz9NKO2yUuGXWTuKI9bkuojpPJ3mh0ASqxC561pQ&oe=65C25922" class="img-fluid">
+             </div>
+         </div>
+         <div class="col-4">
+           <div class="card mt-3" style="width:18rem;height: 18rem;">
+                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6s08-fKtNea86dUcZdkW0dRrYyX885sibdwusz8ROrKBVa1nsQGLe1CtHGm4tlWM2ssU&usqp=CAU" class="img-fluid">
+             </div>
+         </div>
+     </div>
+     <div class="row">
+       <div class="col-4">
+         <div class="card mt-3" style="width:18rem;height: 18rem;">
+                 <img src="https://www.recesspickleball.com/cdn/shop/products/recesspickleball-paddle-vista-38396200190195.jpg?v=1665198537"  class="img-fluid">
+             </div>
+         </div>
+         <div class="col-4">
+           <div class="card mt-3" style="width:18rem;height: 18rem;">
+                 <img src="https://scontent-ord5-2.xx.fbcdn.net/v/t39.30808-6/239198380_4210621325653673_7857223962333306645_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=9534ce&_nc_ohc=Hvmmc2t-PLoAX-O_WQa&_nc_ht=scontent-ord5-2.xx&oh=00_AfBR8Uxht4Lgei-mctzRmUv7KIplo8FvoiFT_Y-TC41xig&oe=65C456CD" class="img-fluid">
+             </div>
+         </div>
+         <div class="col-4">
+           <div class="card mt-3" style="width:18rem;height: 18rem;">
+                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqnMpOxQrLHBMyEw9Rg-sYy-QxyjJ9rXTxOw&usqp=CAU" class="img-fluid">
+             </div>
+         </div>
+     </div>
+     <div class="row">
+       <div class="col-4">
+         <div class="card mt-3" style="width:18rem;height: 18rem;">
+                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRXGHxpTuHr1wwnch2Zggr2HgZtiS3PZ5DdA&usqp=CAU" class="img-fluid">
+             </div>
+         </div>
+         <div class="col-4">
+           <div class="card mt-3" style="width:18rem;height: 18rem;">
+                 <img class="img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYjl6jwgJhYeoOx6ELBYsI6i0YJoe-BCQ_gQ&usqp=CAU" >
+             </div>
+             </div>
+         <div class="col-4">
+           <div class="card mt-3" style="width:18rem;height: 18rem;">
+                 <img class="img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4YkmRlPOmsIzBQlRfGjIROC-du58Kr1u_Cg&usqp=CAU" >
+             </div>
+         </div>
+     </div>
    </div> 
     </div>
+
+
+
     <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
         <!--singleview--> 
         <div class="container text-center">
@@ -146,30 +165,192 @@
                     <div class="card mt-3 mb-3" style="width: 18rem;">
                         <div class="card-body">
                             <div class="card-header bg-transparent d-flex flex-row">
-
-                                <h5 class="card-title">Card title</h5>
+                                <h5 class="card-title">Best Volleyball to Date</h5>
                                 <p>11/12</p>
                             </div>
                             <img src="https://www.wilson.com/en-us/media/catalog/product/article_images/WTH01020X_/WTH01020X__e79165155a81c0e376450a96ffb821bf.png?dpr=2&fit=bounds&orient=1&quality=90&optimize=high&format=pjpg&auto=webp&enable=upscale&width=1920&height=904&bg-color=f5f5f5" class="card-img-top" alt="...">
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <p class="card-text">The Optix is my favorite ball to play volleyball with.</p>
                           
                         </div>
                       </div>
-
                 </div>
                 <div class="col-4"></div>
             </div>
         </div>
     </div>
     </div>
+    <div class="container text-center">
+      <div class="row">
+          <div class="col-4"></div>
+          <div class="col-4">
+              <div class="card mt-3 mb-3" style="width: 18rem;">
+                  <div class="card-body">
+                      <div class="card-header bg-transparent d-flex flex-row">
+                          <h5 class="card-title">Goat Ropers Volleyball</h5>
+                          <p>11/13</p>
+                      </div>
+                      <img src="https://scontent-ord5-2.xx.fbcdn.net/v/t39.30808-6/350538024_929240158378108_8295401280962438242_n.jpg?stp=cp6_dst-jpg&_nc_cat=102&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=agHG59P7G2kAX9bC1Oy&_nc_ht=scontent-ord5-2.xx&oh=00_AfCOIexz9NKO2yUuGXWTuKI9bkuojpPJ3mh0ASqxC561pQ&oe=65C25922" class="card-img-top" alt="...">
+                    <p class="card-text">This is the logo for my volleyball company. Where I run tournaments and training.</p>
+                    
+                  </div>
+                </div>
+          </div>
+          <div class="col-4"></div>
+      </div>
+  </div>
+</div>
+</div>
+<div class="container text-center">
+  <div class="row">
+      <div class="col-4"></div>
+      <div class="col-4">
+          <div class="card mt-3 mb-3" style="width: 18rem;">
+              <div class="card-body">
+                  <div class="card-header bg-transparent d-flex flex-row">
+                      <h5 class="card-title">St. Louis Blues</h5>
+                      <p>11/14</p>
+                  </div>
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6s08-fKtNea86dUcZdkW0dRrYyX885sibdwusz8ROrKBVa1nsQGLe1CtHGm4tlWM2ssU&usqp=CAU" class="card-img-top" alt="...">
+                <p class="card-text">Big Fan of the Saint Louis Blues.</p>
+                
+              </div>
+            </div>
+      </div>
+      <div class="col-4"></div>
+  </div>
+</div>
+</div>
+</div>
+<div class="container text-center">
+  <div class="row">
+      <div class="col-4"></div>
+      <div class="col-4">
+          <div class="card mt-3 mb-3" style="width: 18rem;">
+              <div class="card-body">
+                  <div class="card-header bg-transparent d-flex flex-row">
+                      <h5 class="card-title">Pickle Ball</h5>
+                      <p>11/15</p>
+                  </div>
+                  <img src="https://www.recesspickleball.com/cdn/shop/products/recesspickleball-paddle-vista-38396200190195.jpg?v=1665198537" class="card-img-top" alt="...">
+                <p class="card-text">Pickle ball is another hobbie I enjoy doing.</p>
+                
+              </div>
+            </div>
+      </div>
+      <div class="col-4"></div>
+  </div>
+</div>
+</div>
+</div>
+<div class="container text-center">
+  <div class="row">
+      <div class="col-4"></div>
+      <div class="col-4">
+          <div class="card mt-3 mb-3" style="width: 18rem;">
+              <div class="card-body">
+                  <div class="card-header bg-transparent d-flex flex-row">
+                      <h5 class="card-title">Some Paddle Board Action</h5>
+                      <p>11/16</p>
+                  </div>
+                  <img src="https://scontent-ord5-2.xx.fbcdn.net/v/t39.30808-6/239198380_4210621325653673_7857223962333306645_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=9534ce&_nc_ohc=Hvmmc2t-PLoAX-O_WQa&_nc_ht=scontent-ord5-2.xx&oh=00_AfBR8Uxht4Lgei-mctzRmUv7KIplo8FvoiFT_Y-TC41xig&oe=65C456CD" class="card-img-top" alt="...">
+                <p class="card-text">Me paddle boarding in the mountians in Idaho.</p>
+                
+              </div>
+            </div>
+      </div>
+      <div class="col-4"></div>
+  </div>
+</div>
+</div>
+</div>
+<div class="container text-center">
+  <div class="row">
+      <div class="col-4"></div>
+      <div class="col-4">
+          <div class="card mt-3 mb-3" style="width: 18rem;">
+              <div class="card-body">
+                  <div class="card-header bg-transparent d-flex flex-row">
+                      <h5 class="card-title">My Favorite Vacation spot</h5>
+                      <p>11/17</p>
+                  </div>
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqnMpOxQrLHBMyEw9Rg-sYy-QxyjJ9rXTxOw&usqp=CAU" class="card-img-top" alt="...">
+                <p class="card-text">The mountians are my favorite place to go on a vacation.</p>
+                
+              </div>
+            </div>
+      </div>
+      <div class="col-4"></div>
+  </div>
+</div>
+</div>
+</div>
+<div class="container text-center">
+  <div class="row">
+      <div class="col-4"></div>
+      <div class="col-4">
+          <div class="card mt-3 mb-3" style="width: 18rem;">
+              <div class="card-body">
+                  <div class="card-header bg-transparent d-flex flex-row">
+                      <h5 class="card-title">Surfing</h5>
+                      <p>11/18</p>
+                  </div>
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRXGHxpTuHr1wwnch2Zggr2HgZtiS3PZ5DdA&usqp=CAU" class="card-img-top" alt="...">
+                <p class="card-text">Surfing is another hobbie of mine, although I don't get to partake in as much as I would like.</p>
+                
+              </div>
+            </div>
+      </div>
+      <div class="col-4"></div>
+  </div>
+</div>
+</div>
+</div>
+<div class="container text-center">
+  <div class="row">
+      <div class="col-4"></div>
+      <div class="col-4">
+          <div class="card mt-3 mb-3" style="width: 18rem;">
+              <div class="card-body">
+                  <div class="card-header bg-transparent d-flex flex-row">
+                      <h5 class="card-title">Favorite View</h5>
+                      <p>11/19</p>
+                  </div>
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYjl6jwgJhYeoOx6ELBYsI6i0YJoe-BCQ_gQ&usqp=CAU" class="card-img-top" alt="...">
+                <p class="card-text">Being able to see the stars is the best thing about living outside the city.</p>
+                
+              </div>
+            </div>
+      </div>
+      <div class="col-4"></div>
+  </div>
+</div>
+</div>
+</div>
+<!---->
+<div class="container text-center">
+  <div class="row">
+      <div class="col-4"></div>
+      <div class="col-4">
+          <div class="card mt-3 mb-3" style="width: 18rem;">
+              <div class="card-body">
+                  <div class="card-header bg-transparent d-flex flex-row">
+                      <h5 class="card-title">Lemons</h5>
+                      <p>11/20</p>
+                  </div>
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4YkmRlPOmsIzBQlRfGjIROC-du58Kr1u_Cg&usqp=CAU" class="card-img-top" alt="...">
+                <p class="card-text">As much as I like the cold and winter, summer is the best! Lemons are a nice reminder of summer.</p>
+                
+              </div>
+            </div>
+      </div>
+      <div class="col-4"></div>
+  </div>
+</div>
+</div>
+</div>
 <!---->
 </div>
-
-
-
-
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 </body>
-
 </html>
